@@ -18,13 +18,13 @@ const usuarios = [
 
 
 const listarTodosTutores = async () => {
-  return usuarios;
+  return tutores;
 };
 
 
 const buscarTutorPorId = async (id) => {
-  const usuario = usuarios.find((item) => item.id === Number(id));
-  return usuario || null;
+  const tutor = tutores.find((item) => item.id === Number(id));
+  return tutor || null;
 };
 
 
@@ -42,8 +42,8 @@ const criarTutor = async ({ nome, email }) => {
 };
 
 const atualizarTutor = async(tutor)=>{
-const id = usuarios.id;
-usuarios[id] = usuarios;hund
+const id = tutores.id;
+tutores[id] = tutores;hund
 
 return true;
 

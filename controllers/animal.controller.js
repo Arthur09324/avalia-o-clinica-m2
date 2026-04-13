@@ -1,9 +1,8 @@
-const livroService = require('../services/animal.service');
+const AnimalService = require('../services/animal.service');
 
 
-const listarAnimais = async (req, res) => {
+const listarAnimais = async (req, res, next) => {
   try {
-    return next(new Error('erro de teste'));
     const Animais = await AnimaisService.listarTodosAnimais();
     res.status(200).json({ total: Animais.length, Animais });
   } catch (erro) {
@@ -15,7 +14,7 @@ const buscarAnimalPorId = async (req, res) => {
   try {
   
     const { id } = req.params;
-    const animal = await animalService.buscarAnimalPorId(id);
+    const Animal = await animalService.buscarAnimalPorId(id);
 
     if (!Animal) {
       return res
@@ -33,7 +32,7 @@ const criarAnimal = async (req, res) => {
   try {
 
     const { nome, raça } = req.body;
-    const novoAnimal = await AnimalService.criarAnimal({ nome, raça });
+    const novoAnimal = await AnimalService.criarAnimal({ nome, raça, data_nascimento });
 
     res.status(201).json({
       mensagem: 'animal cadastrado no acervo com sucesso!',

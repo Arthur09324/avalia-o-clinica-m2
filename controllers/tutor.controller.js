@@ -1,6 +1,5 @@
 const tutorService = require('../services/tutor.service');
 
-// GET /usuarios
 const listarTutores = async (req, res) => {
   try {
     const tutores = await tutorService.listarTodosTutores();

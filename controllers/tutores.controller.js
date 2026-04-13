@@ -1,4 +1,4 @@
-const usuariosService = require('../services/tutores.service');
+const tutoresService = require('../services/tutores.service');
 
 
 const listarTutores = async (req, res) => {
@@ -49,4 +49,4 @@ res.status(502).json({success: false});
 
 }
 
-module.exports = { listarTutores, criarTutor, atualizarTutor };
+module.exports = { listarTutores, criarTutor, atualizarTutores };
