@@ -1,5 +1,5 @@
 
-const pool = require('../database/connection@S')
+const pool = require('../database/connection')
 
 const listarTodosAnimais = async () => {
   try{

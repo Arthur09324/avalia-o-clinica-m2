@@ -1,9 +1,9 @@
 
 const router = require('express').Router();
-const livroController = require('../controllers/livro.controller');
+const animalController = require('../controllers/animal.controller');
 
-router.get('/', livroController.listarLivros);
-router.get('/:id', livroController.buscarLivroPorId);
-router.post('/', livroController.criarLivro);
+router.get('/', animalController.listarAnimais);
+// router.get('/:id', tutorController.buscarAnimalPorId);
+// router.post('/', tutoresController.criarAnimal);
 
 module.exports = router;

@@ -1,4 +1,4 @@
-const tutoresService = require('../services/tutores.service');
+const tutoresService = require('../services/tutor.service');
 
 
 const listarTutores = async (req, res) => {

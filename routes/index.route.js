@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const livroRoute = require('./animal.route');
-const usuarioRoute = require('./usuario.route');
+const animalRoute = require('./animal.route');
+const tutorRoute = require('./usuario.route');
 
-const { autenticar, validarContentType } = require('../middlewares/main.middleware');
+// const { autenticar, validarContentType } = require('../middlewares/main.middleware');
 
 
 router.get('/', (req, res) => {
@@ -12,18 +12,17 @@ router.get('/', (req, res) => {
 });
 
 
-router.use(autenticar);
-router.use(validarContentType);
+// router.use(autenticar);
+// router.use(validarContentType);
 
-// 3. Rotas Protegidas
-router.use('/livros', livroRoute);
-router.use('/usuarios', usuarioRoute);
+router.use('/animais', animalRoute);
+router.use('/tutor', tutorRoute);
 
 
 router.use((req, res) => {
   res
     .status(404)
-    .json({ erro: 'Rota não encontrada na Biblioteca Ralph & Teddy.' });
+    .json({ erro: 'Rota não encontrada na clinica-M2.' });
 });
 
 module.exports = router;

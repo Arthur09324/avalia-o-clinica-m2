@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./src/routes/index.routes');
+const routes = require('./routes/index.route');
 
 
 const app = express();
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.use(routes);
 
 
-app.use(errorHandler);
+// app.use(errorHandler);
 
 const PORT = 3000;
 app.listen(PORT, () => {
