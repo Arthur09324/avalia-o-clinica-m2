@@ -31,7 +31,7 @@ const criarTutor = async (req, res) => {
 
     
     res.status(201).json({
-      mensagem: 'Tutor cadastrado com sucesso!',
+      mensagem: 'consulta cadastrada com sucesso!',
       usuario: novoTutor,
     });
   } catch (erro) {

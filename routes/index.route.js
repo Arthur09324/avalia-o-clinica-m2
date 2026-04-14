@@ -2,18 +2,18 @@ const express = require('express');
 const router = express.Router();
 
 const animalRoute = require('./animal.route');
-const tutorRoute = require('./usuario.route');
+const tutorRoute = require('./tutor.route');
 
-// const { autenticar, validarContentType } = require('../middlewares/main.middleware');
+ const { autenticar, validarContentType } = require('../middlewares/main.middleware');
 
 
 router.get('/', (req, res) => {
-  res.json({ sistema: 'Biblioteca Ralph & Teddy', status: 'Online' });
+  res.json({ sistema: 'clinica-m2', status: 'Online' });
 });
 
 
-// router.use(autenticar);
-// router.use(validarContentType);
+router.use(autenticar);
+router.use(validarContentType);
 
 router.use('/animais', animalRoute);
 router.use('/tutor', tutorRoute);

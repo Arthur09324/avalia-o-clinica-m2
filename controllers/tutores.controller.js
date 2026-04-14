@@ -32,11 +32,11 @@ const atualizarTutores = async (req, res)=>{
 const {id, nome, email} = req.body;
 const tutores = await tutoresService.listarTodosTutores()
 
-let tutor = tutor[id];
+let tutor = tutores[id];
 tutor.nome = nome;
 tutor.email = email;
 
-const success = await usuariosService.atualizarTutor(tutor)
+const success = await tutoresService.atualizarTutor(tutor)
 if (success){
 
 res.status(201).json({success: true});

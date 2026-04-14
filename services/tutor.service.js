@@ -6,7 +6,7 @@ const listarTodosTutores = async () => {
 
 
 const buscarTutorPorId = async (id) => {
-  const tutor = tutores.find((item) => item.id === Number(id));
+  const tutor = tutor.find((item) => item.id === Number(id));
   return tutor || null;
 };
 
@@ -16,7 +16,7 @@ const criarTutor = async ({ nome, email }) => {
     throw new Error('Nome e e-mail são obrigatórios.');
   }
   const novoTutor = {
-    id: usuarios.length + 1,
+    id: tutores.length + 1,
     nome,
     email,
   };
@@ -25,8 +25,8 @@ const criarTutor = async ({ nome, email }) => {
 };
 
 const atualizarTutor = async(tutor)=>{
-const id = tutores.id;
-tutores[id] = tutores;hund
+const id = tutor.id;
+  tutor[id] = tutor;
 
 return true;
 
