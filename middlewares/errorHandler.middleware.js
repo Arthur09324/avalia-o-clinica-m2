@@ -12,4 +12,3 @@ caminho: req.url
 }
 
 module.exports = errorHandler
-
