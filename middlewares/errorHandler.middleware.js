@@ -13,4 +13,3 @@ caminho: req.url
 
 module.exports = errorHandler
 
-//lembrar de mexer no handler para resolver erro interno 

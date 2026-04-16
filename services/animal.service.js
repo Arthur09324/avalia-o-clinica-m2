@@ -32,4 +32,4 @@ return res.rows[0];
 }catch(error){}
 };
 
-module.exports = { listarTodosAnimais, buscarAnimalPorId, criarAnimal };
+module.exports = { listarTodosAnimais, buscarAnimalPorId, criarAnimal, };

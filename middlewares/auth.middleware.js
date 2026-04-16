@@ -1,4 +1,3 @@
-
 const CHAVE_ACESSO = 'acesso-clinica';
 
 const autenticar = (req, res, next) => {
