@@ -31,8 +31,8 @@ const buscarAnimalPorId = async (req, res) => {
 const criarAnimal = async (req, res) => {
   try {
 
-    const { nome, raça } = req.body;
-    const novoAnimal = await AnimalService.criarAnimal({ nome, raça, data_nascimento });
+    const { id, nome,especie, raca, data_nascimento, tutor_id } = req.body;
+    const novoAnimal = await AnimalService.criarAnimal({ id, nome,especie, raca, data_nascimento, tutor_id });
 
     res.status(201).json({
       mensagem: 'animal cadastrado com sucesso!',

@@ -21,7 +21,7 @@ const buscarAnimalPorId = async (id) => {
 
 const criarAnimal = async ({ nome, raca,  especie, data_nascimento, tutor_id }) => {
  try{
-const query = `INSERT INTO Animais (nome, raca,  data_retiro, data_consulta, consulta_id)VALUES($1, $2, $3, $4)`
+const query = `INSERT INTO Animais (nome, raca, especie, data_nascimento, tutor_id)VALUES($1, $2, $3, $4)`
 const res = await pool.query(
 [nome,
 raca,

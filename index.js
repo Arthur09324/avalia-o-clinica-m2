@@ -23,4 +23,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`[SERVIDOR] clinica operando em http://localhost:${PORT}`);
 });
-

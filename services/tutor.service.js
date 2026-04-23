@@ -11,7 +11,7 @@ const buscarTutorPorId = async (id) => {
 };
 
 
-const criarTutor = async ({ nome, email }) => {
+const criarTutor = async ({ nome, email, telefone }) => {
   if (!nome || !email) {
     throw new Error('Nome e e-mail são obrigatórios.');
   }
@@ -19,6 +19,7 @@ const criarTutor = async ({ nome, email }) => {
     id: tutores.length + 1,
     nome,
     email,
+    telefone,
   };
   usuarios.push(novoTutor);
   return novoTutor;
